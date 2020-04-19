@@ -47,12 +47,26 @@ Hands On
  1 - Create a collection for the working days - monday, tuesday, wednesday, thursday, friday 
  
  2 - Create and access dictionary for the following -> 
+ <menu>
     <breakfast>
         <name>Idli Vada</name>
         <price>25</price>
         <description>popular, sort-of-staple food in the South Indian states</description>
         <calories>150</calories>
     </breakfast>
+    <lunch>
+        <name>Idli Vada</name>
+        <price>25</price>
+        <description>popular, sort-of-staple food in the South Indian states</description>
+        <calories>150</calories>
+    </lunch>
+    <dinner>
+        <name>Idli Vada</name>
+        <price>25</price>
+        <description>popular, sort-of-staple food in the South Indian states</description>
+        <calories>150</calories>
+    </dinner>
+</menu>
 
  3 - Unpack tuple values: julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
  
@@ -62,3 +76,27 @@ Hands On
     User wants to store the following subject in a variable - mathematics, python, data sturcture, big data
     In future, user also wants to modify the list according to his/her choice.
 '''
+
+myWorkingDays = ("monday", "tuesday", "wednesday", "thursday", "friday")
+thirdWorkingDay = myWorkingDays[2]
+print(thirdWorkingDay)
+
+myTodaysMenu = {
+    "menu":{
+        "breakfast":{"name":"Idli Vada","price": 25, "description":"popular, sort-of-staple food in the South Indian states", "calories":150},
+        "lunch":{"name":"Idli Vada","price": 25, "description":"popular, sort-of-staple food in the South Indian states", "calories":150},
+        "dinner":{"name":"Idli Vada","price": 25, "description":"popular, sort-of-staple food in the South Indian states", "calories":150}
+    }
+}
+
+julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
+
+(name, title, dob,_,releaseyear, profession, city) = julia
+print(name)
+
+myList = [1,[2,3,4],5]
+print(myList[1][1])
+
+myData = ["mathematics", "python", "data sturcture", "big data"]
+myData[2] = "Data science"
+print(myData)
