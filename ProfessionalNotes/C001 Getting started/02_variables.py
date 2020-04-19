@@ -24,6 +24,10 @@ print(myVar,type(myVar))  # True <class 'bool'>
 myVar = None
 print(myVar,type(myVar))  # None <class 'NoneType'>
 
+# Assigning same initial value to variables
+a=b=c=1
+print(a, b, c)
+
 # assign multiple values to multiple variables
 a,b,c = 1,2,3
 print(a,b,c)
@@ -34,7 +38,8 @@ print(a,c)
 # a, b, c = 1, 2  # ValueError: need more than 2 values to unpack
 # a,b = 1,2,3     # ValueError: too many values to unpack
 
-x=y=[7,8,12] # assigning list object
+# assigning list object
+x=y=[7,8,12] 
 print(x,y)
 x=[1,2,3] # x is now pointing to different object
 print(x,y)
