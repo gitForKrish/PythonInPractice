@@ -19,6 +19,8 @@ and supports 'multiple programming paradigms' including object oriented, imperat
     $py --version
     Or
     $python --version
+
+- Python is case sensitive language
 '''
 
 # Printing Greeting Messages
