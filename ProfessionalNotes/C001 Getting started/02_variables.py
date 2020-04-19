@@ -31,6 +31,9 @@ print(a,b,c)
 a,_,c = 1,2,3 # _ is a placeholder
 print(a,c)
 
+# a, b, c = 1, 2  # ValueError: need more than 2 values to unpack
+# a,b = 1,2,3     # ValueError: too many values to unpack
+
 x=y=[7,8,12] # assigning list object
 print(x,y)
 x=[1,2,3] # x is now pointing to different object
