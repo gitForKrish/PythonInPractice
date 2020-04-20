@@ -43,3 +43,18 @@ mySet = {1,2,3,3}   # redundant value will be removed at the time of initializat
 print(mySet)
 print(type(mySet))
 # as set is unordered, you can't access element through index
+# mtSet[1] # not allowed
+
+#7. dictionary: An unordered collection of unique key-value pairs
+a = {1:"one", 2:"two"}
+print(a)
+print(type(a))
+print(a[1])
+
+person = {"name":"krishnendu", "age":31}
+print(person)
+print(person["name"], person["age"])
+
+'''
+Immutable Data Type: bool, int, float, complex, str, tuple
+Mutable Data Type: list, dict, set
