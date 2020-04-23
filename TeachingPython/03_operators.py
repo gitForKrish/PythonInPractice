@@ -1,5 +1,5 @@
 # Python Operators
-# Arithmatic Operator
+# Arithmatic Operators
 a,b = 28,3
 print("Add=",a+b)
 print('Sub=',a-b)
@@ -9,28 +9,49 @@ print("Mod=",a%b)
 print("Floor=",a//b)
 print("Exp=",a**b)
 
-st = "hello"
-inputValue = 5
-print(st+str(inputValue)) # Type Conversion
-isValid = True
-print(str(isValid))
+# Assignment Operators
+a=b
+print(a)
+a+=b # a = a+b
+print(a)
 
-print(True)
-# print(type(True==1))
+a-=b #a = a-b
+print(a)
+a*=b
+print(a)
+a,b = 28,3
+a%=b
+print(a)
 
-# issubclass()
-# isinstance()
-print(issubclass(bool, int))
-print(True==1)
+a,b = 28,3
+a//=b
+print(a)
+a,b = 28,3
+a**=b
+print(a)
 
-print(isinstance(True, bool))
-print(isinstance(4.5, int))
-print(isinstance(1, bool))
-print(isinstance(1, int))
+# Logical Operators
+a,b = True,False
+print(a and b)
+print(a or b)
+print(not a)
+print(True and False)
 
+# Bitwise operators
+a,b = 5,3 # 1010 0011
+print(a & b)
+print(a | b)
+print(a ^ b)
+print(~a)
 
-print(isinstance("\n", str))
-print(isinstance("5", int))
-print(isinstance(4.5e10, float))
-print(issubclass(int, float))
+# Identity Operator
+today = "thuesday"
+weekend = "friday"
+print(today is weekend)
+print(today is not weekend)
 
+# membership operator
+#  in, not in
+stud = ["ram", 'shyam', 'jack', 'jadhu']
+print('madhu' in stud)
+print('madhu' not in stud)
