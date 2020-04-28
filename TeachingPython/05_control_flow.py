@@ -1,26 +1,26 @@
 # loop - for, while
 # print 1 - 20
 
-# i = 1
-# print(i)
+i = 1
+print(i)
 
-# i += 1
-# print(i)
+i += 1
+print(i)
 
-# i += 1
-# print(i)
+i += 1
+print(i)
 
 for i in range(20): # 1 para - stop(exclusive)
     print(i+1)
 
-# for i in range(1,21): # 1 para - stop(exclusive)
-#     print(i)
+for i in range(1,21): # 1 para - stop(exclusive)
+    print(i)
 
-# for i in range(1,20): # 2 para - 1st: start value (inclusive), 2nd: stop value (exclusive)
-#     print(i)
+for i in range(1,20): # 2 para - 1st: start value (inclusive), 2nd: stop value (exclusive)
+    print(i)
 
-# for i in range(1, 20, 5): # 3 para - 1st: start value (inclusive), 2nd: stop value (exclusive), 3rd: step
-#     print(i)
+for i in range(1, 20, 5): # 3 para - 1st: start value (inclusive), 2nd: stop value (exclusive), 3rd: step
+    print(i)
 
 # for i in range(1, 20, 5, 4): # 3 para - 1st: start value (inclusive), 2nd: stop value (exclusive), 3rd: step
 #     print(i)
@@ -58,7 +58,7 @@ userInput = int(userInput)
 for x in range(userInput + 1):
     print('*'*x)
 
-# Print prime numbers upto 100
+# - Print prime numbers upto 100
 # - print all number divisible by 5 upto 100
 # - print the below as per user input: 4
 '''
@@ -73,3 +73,28 @@ for x in range(userInput + 1):
 
 # print(10, end="Hello")
 # print(20)
+
+number = int(input("Enter a number to check for Prime or not? "))
+isPrime = True
+for i in range(2, int(number ** (1/2))+1):
+    if number % i == 0:
+        isPrime = False
+        break
+
+if(isPrime == True):
+    print(number, " is prime")
+else:
+    print(number, " is not prime")
+
+import math
+print(math.sqrt(25))
+
+# import Prime
+from prime import isPrime 
+for i in range(101):
+    if isPrime(i):
+        print(i, "is Prime")
+    else:
+        print(i, "is not Prime")
+
+
