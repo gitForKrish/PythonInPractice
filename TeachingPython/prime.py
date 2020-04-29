@@ -9,3 +9,6 @@ def isPrime(num):
             break
     
     return not noPrimeFlag 
+
+def sayHello():
+    print('Hello, how are you?')

@@ -89,12 +89,16 @@ else:
 import math
 print(math.sqrt(25))
 
-# import Prime
-from prime import isPrime 
+import prime
+for i in range(101):
+    if prime.isPrime(i):
+        print(i, "is Prime")
+    else:
+        print(i, "is not Prime")
+
+from prime import isPrime
 for i in range(101):
     if isPrime(i):
         print(i, "is Prime")
     else:
         print(i, "is not Prime")
-
-
