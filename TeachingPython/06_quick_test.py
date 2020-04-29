@@ -34,3 +34,7 @@ print("Hello" * 5) #
 msg = "hello"
 msg += " world"
 print(msg)
+
+# List out  all the odd numbers from 1 to 100 using lists in Python.
+oddNumber = [x for x in range(1,101) if x%2 != 0]
+print(oddNumber)
