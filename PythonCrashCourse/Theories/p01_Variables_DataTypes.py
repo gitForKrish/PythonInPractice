@@ -8,7 +8,7 @@ message = "Hello Python Crash Course World!"    # variable is changing value
 print(message)
 
 message = "Hello Python Crash Course reader!"   # variables as labels that you can assign to values
-#print(mesage)                                   # Avoiding Name Errors When Using Variables
+#print(mesage)                                  # Avoiding Name Errors When Using Variables
 
 #---------------------------------String----------------------------------------------
 "This is a string."                             # A string is a series of characters
