@@ -8,7 +8,7 @@ have one line of output containing a simple statement like I like pepperoni pizz
 how much you like pizza. The output should consist of three or more lines
 about the kinds of pizza you like and then an additional sentence, such as I really love pizza!
 '''
-
+pizzas = ["Mushroom Pizza", "Panner Pizza", "Peri Peri Chicken Pizza"]
 '''
 4-2. Animals: Think of at least three different animals that have a common characteristic.
 Store the names of these animals in a list, and then use a for loop to print out the name of each animal.
