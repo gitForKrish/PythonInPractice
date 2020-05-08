@@ -2,27 +2,43 @@
 3-1. Names: Store the names of a few of your friends in a list called names. 
 Print each person’s name by accessing each element in the list, one at a time.
 '''
+names = ['ankur','aman','rajeeb','diptesh']
+print(names[0])
+print(names[1])
+print(names[2])
+print(names[3])
+# OR
+for name in names:
+    print(name)
 
 '''
 3-2. Greetings: Start with the list you used in Exercise 3-1, but instead of just
 printing each person’s name, print a message to them. The text of each message
 should be the same, but each message should be personalized with the person’s name.
 ''' 
-
+for name in names:
+    print(F"Hello {name.title()}")
 '''
 3-3. Your Own List: Think of your favorite mode of transportation, such as a
 motorcycle or a car, and make a list that stores several examples. Use your list
 to print a series of statements about these items, such as “I would like to own a
 Honda motorcycle.”
 '''
-
+transportation_media = ['taxi','bus','auto','scooty','flight']
+print(f"{transportation_media[0].title()} helps to travel distance in range between 100KM to 500KM")
+print(f"{transportation_media[1].title()} helps to travel distance in range between 10KM to 50KM")
+print(f"{transportation_media[2].title()} helps to travel distance in range between 1KM to 20KM")
+print(f"{transportation_media[3].title()} helps to travel distance in range between 1KM to 150KM")
+print(f"{transportation_media[4].title()} helps to travel distance in range between 500KM to 10000KM")
 '''
 3-4. Guest List: If you could invite anyone, living or deceased, to dinner, who
 would you invite? Make a list that includes at least three people you’d like to
 invite to dinner. Then use your list to print a message to each person, inviting
 them to dinner.
 '''
-
+guests = ['ankur','aman', 'rajeeb','diptesh']
+for guest in guests:
+    print(f"Hello {guest.title()}, You are invited!!!")
 '''
 3-5. Changing Guest List: You just heard that one of your guests can’t make the
 dinner, so you need to send out a new set of invitations. You’ll have to think of
