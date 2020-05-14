@@ -160,8 +160,6 @@ Add an attribute, privileges, that stores a list of strings like "can add post",
 Write a method called show_privileges() that lists the administrator’s set of privileges. Create an instance of Admin, and call your method.
 '''
 print("------------------------------------------------------------------------------------------")
-
-
 class User():
     def __init__(self, fname, lname):
         self.first_name = fname
@@ -191,8 +189,7 @@ class Admin(User):
         print(self.privileges)
 
 
-admin_user = Admin('Super', 'Admin', [
-                   "can add post", "can delete post", "can ban user"])
+admin_user = Admin('Super', 'Admin', ["can add post", "can delete post", "can ban user"])
 admin_user.show_privileges()
 print("------------------------------------------------------------------------------------------")
 '''
@@ -201,8 +198,6 @@ Move the show_privileges() method to this class. Make a Privileges instance as a
 Create a new instance of Admin and use your method to show its privileges.
 '''
 print("------------------------------------------------------------------------------------------")
-
-
 class Privileges():
     def __init__(self, privileges):
         self.privileges = privileges
@@ -210,7 +205,6 @@ class Privileges():
     def show_privileges(self):
         print('List of privileges:')
         print(self.privileges)
-
 
 class User():
     def __init__(self, fname, lname):
@@ -231,14 +225,12 @@ class User():
     def reset_login_attempts(self):
         self.login_attempts = 0
 
-
 class Admin(User):
     def __init__(self, fname, lname, privileges):
         super().__init__(fname, lname)
         self.privileges = Privileges(privileges)
 
 
-admin_user = Admin('Super', 'Admin', [
-                   "can add post", "can delete post", "can ban user"])
+admin_user = Admin('Super', 'Admin', ["can add post", "can delete post", "can ban user"])
 admin_user.privileges.show_privileges()
 print("------------------------------------------------------------------------------------------")
