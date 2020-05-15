@@ -1,0 +1,6 @@
+Python is a dynamically typed language.
+Python is case sensitive.
+Python is heavily used in Data Science Applications.
+Variable can change its type during runtime in Python.
+Formatted string is introduced in Python from version 3.7.
+Class and Inheritance is supported as an OOPs feature in Python.
