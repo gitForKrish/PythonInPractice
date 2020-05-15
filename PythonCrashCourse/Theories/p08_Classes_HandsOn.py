@@ -13,12 +13,13 @@ class Restaurent():
         self.restaurant_name = restaurant_name
         self.cuisine_type = cuisine_type
         self.number_served = 0
-    
+
     def describe_restaurant(self):
-        print(f"Welcome to {self.restaurant_name.title()}. This is a {self.cuisine_type.upper()} restaurant!!!")
-    
+        print(
+            f"Welcome to {self.restaurant_name.title()}. This is a {self.cuisine_type.upper()} restaurant!!!")
+
     def open_restaurant(self):
-        current_time = strftime('%H:%M',gmtime())
+        current_time = strftime('%H:%M', gmtime())
         if current_time > '11:00' and current_time < '23:00':
             print('Restaurant is open now ...')
         else:
@@ -26,9 +27,10 @@ class Restaurent():
 
     def set_number_served(self, count):
         self.number_served = count
-    
+
     def increment_number_served(self):
         self.number_served += 1
+
 
 my_restaurent = Restaurent('Royal Blues', 'Cuisine')
 my_restaurent.describe_restaurant()
@@ -60,12 +62,13 @@ class User():
         self.first_name = fname
         self.last_name = lname
         self.login_attempts = 0
-    
+
     def describe_user(self):
         print(f"User Name: {self.first_name.title()} {self.last_name.title()}")
-    
+
     def greet_user(self):
-        print(f"Hello {self.first_name.title()} {self.last_name.title()}. Hope you are doing good.")
+        print(
+            f"Hello {self.first_name.title()} {self.last_name.title()}. Hope you are doing good.")
 
     def increment_login_attempts(self):
         self.login_attempts += 1
@@ -73,7 +76,8 @@ class User():
     def reset_login_attempts(self):
         self.login_attempts = 0
 
-user1 = User('jack','william')
+
+user1 = User('jack', 'william')
 user2 = User('michel', 'stanley')
 user1.describe_user()
 user1.greet_user()
@@ -132,14 +136,99 @@ these flavors. Create an instance of IceCreamStand, and call this method.
 '''
 class IceCreamStand(Restaurent):
     def __init__(self, name, cuisine_type, flavors):
-        super().__init__(name,cuisine_type)
+        super().__init__(name, cuisine_type)
         self.flavors = flavors
-    
+
     def show_flavors(self):
         print(self.flavors)
 
-ice_cream_stand = IceCreamStand('IceCreamStand','Ice Cream Stand', ['Vanilla','buttersotch','almondcrumble'])
+
+ice_cream_stand = IceCreamStand('IceCreamStand', 'Ice Cream Stand', [
+                                'Vanilla', 'buttersotch', 'almondcrumble'])
 ice_cream_stand.show_flavors()
+
+'''
+9-7. Admin: An administrator is a special kind of user. Write a class called
+Admin that inherits from the User class you wrote in Exercise 9-3 or Exercise 9-5. 
+Add an attribute, privileges, that stores a list of strings like "can add post", "can delete post", "can ban user", and so on.
+Write a method called show_privileges() that lists the administrator’s set of privileges. Create an instance of Admin, and call your method.
+'''
+print("------------------------------------------------------------------------------------------")
+class User():
+    def __init__(self, fname, lname):
+        self.first_name = fname
+        self.last_name = lname
+        self.login_attempts = 0
+
+    def describe_user(self):
+        print(f"User Name: {self.first_name.title()} {self.last_name.title()}")
+
+    def greet_user(self):
+        print(
+            f"Hello {self.first_name.title()} {self.last_name.title()}. Hope you are doing good.")
+
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+
+class Admin(User):
+    def __init__(self, fname, lname, privileges):
+        super().__init__(fname, lname)
+        self.privileges = privileges
+
+    def show_privileges(self):
+        print(self.privileges)
+
+
+admin_user = Admin('Super', 'Admin', ["can add post", "can delete post", "can ban user"])
+admin_user.show_privileges()
+print("------------------------------------------------------------------------------------------")
+
+'''
+9-8. Privileges: Write a separate Privileges class. The class should have one attribute, privileges, that stores a list of strings as described in Exercise 9-7.
+Move the show_privileges() method to this class. Make a Privileges instance as an attribute in the Admin class. 
+Create a new instance of Admin and use your method to show its privileges.
+'''
+print("------------------------------------------------------------------------------------------")
+class Privileges():
+    def __init__(self, privileges):
+        self.privileges = privileges
+
+    def show_privileges(self):
+        print('List of privileges:')
+        print(self.privileges)
+
+class User():
+    def __init__(self, fname, lname):
+        self.first_name = fname
+        self.last_name = lname
+        self.login_attempts = 0
+
+    def describe_user(self):
+        print(f"User Name: {self.first_name.title()} {self.last_name.title()}")
+
+    def greet_user(self):
+        print(
+            f"Hello {self.first_name.title()} {self.last_name.title()}. Hope you are doing good.")
+
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+class Admin(User):
+    def __init__(self, fname, lname, privileges):
+        super().__init__(fname, lname)
+        self.privileges = Privileges(privileges)
+
+
+admin_user = Admin('Super', 'Admin', ["can add post", "can delete post", "can ban user"])
+admin_user.privileges.show_privileges()
+print("------------------------------------------------------------------------------------------")
 
 '''
 9-13. Dice: Make a class Die with one attribute called sides, which has a default
