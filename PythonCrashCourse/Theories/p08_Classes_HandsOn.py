@@ -142,15 +142,44 @@ ice_cream_stand = IceCreamStand('IceCreamStand','Ice Cream Stand', ['Vanilla','b
 ice_cream_stand.show_flavors()
 
 '''
-9-7. Admin: An administrator is a special kind of user. Write a class called
-Admin that inherits from the User class you wrote in Exercise 9-3 (page 162)
-or Exercise 9-5 (page 167). Add an attribute, privileges, that stores a list
-of strings like "can add post", "can delete post", "can ban user", and so on.
-Write a method called show_privileges() that lists the administrator’s set of
-privileges. Create an instance of Admin, and call your method.
-9-8. Privileges: Write a separate Privileges class. The class should have one
-attribute, privileges, that stores a list of strings as described in Exercise 9-7.
-Move the show_privileges() method to this class. Make a Privileges instance
-as an attribute in the Admin class. Create a new instance of Admin and use your
-method to show its privileges.
+9-13. Dice: Make a class Die with one attribute called sides, which has a default
+value of 6. Write a method called roll_die() that prints a random number
+between 1 and the number of sides the die has. Make a 6-sided die and roll it
+10 times. Make a 10-sided die and a 20-sided die. Roll each die 10 times.
+'''
+from random import randint
+class Die():
+    def __init__(self, sides):
+        self.sides = sides
+    def roll_die(self):
+        print(randint(1, self.sides))
+
+six_sided_die = Die(6)
+for i in range(10):
+    six_sided_die.roll_die()
+
+ten_sided_die = Die(10)
+ten_sided_die.roll_die()
+
+twenty_sided_die = Die(20)
+twenty_sided_die.roll_die()
+'''
+9-14. Lottery: Make a list or tuple containing a series of 10 numbers and five letters. 
+Randomly select four numbers or letters from the list and print a message saying that 
+any ticket matching these four numbers or letters wins a prize.
+'''
+from random import choice
+mylist = (1,2,3,4,5,6,7,8,9,0,'A','B','C','D','E')
+build_ticket = ''
+build_ticket += str(choice(mylist))
+build_ticket += str(choice(mylist))
+build_ticket += str(choice(mylist))
+build_ticket += str(choice(mylist))
+print(f'Winning Ticket Number: {build_ticket}')
+
+'''
+9-15. Lottery Analysis: You can use a loop to see how hard it might be to win
+the kind of lottery you just modeled. Make a list or tuple called my_ticket.
+Write a loop that keeps pulling numbers until your ticket wins. Print a message
+reporting how many times the loop had to run to give you a winning ticket.
 '''
