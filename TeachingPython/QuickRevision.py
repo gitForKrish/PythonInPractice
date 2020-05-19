@@ -134,5 +134,33 @@ Control Statements
 Functions
 '''
 # given two user input, find the first common divider except 1
-def first_common_divider(num1, num2):
-    # 6,9 -> max, min q/9 = 0, 9/6 
+# def first_common_divider(num1, num2):
+# 12 - 2,3,4,6,12
+# 18 - 2,3,6,9,18
+# Output: 2
+
+def find_divisor_without_1(x):
+    list_of_x = []
+    for i in range(2, x + 1):
+        if x % i == 0:
+            list_of_x.append(i)
+    return list_of_x
+
+x = 7
+print(find_divisor_without_1(x))
+
+x = 24
+print(find_divisor_without_1(x))
+
+x = 7
+y = 14
+list_of_x = find_divisor_without_1(x)
+list_of_y = find_divisor_without_1(y)
+
+print(list_of_x)
+print(list_of_y)
+
+for element_in_x in list_of_x:
+    if element_in_x in list_of_y:
+        print(f'first_common_divider = {element_in_x}')
+        break
