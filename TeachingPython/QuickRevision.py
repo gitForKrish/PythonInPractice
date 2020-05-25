@@ -164,3 +164,68 @@ for element_in_x in list_of_x:
     if element_in_x in list_of_y:
         print(f'first_common_divider = {element_in_x}')
         break
+
+# Leap Year
+'''
+divisible 4 
+false - not leap year
+true - divisible 100
+    false - leap year 
+    true - divisible by 400
+        true - leap year
+        false - not leap year
+        '''
+year = int(input('enter a year to check leap year or not: '))
+if year >= 0:
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                print('The given year is a LEAP year.')
+            else:
+                print('The given year is not a LEAP year.')
+        else:
+            print('The given year is a LEAP year.')
+    else:
+        print('The given year is not a LEAP year.')
+else:
+    print('Invalid year')
+
+# LCM & GCD
+'''
+24, 32, 44
+LCM: 
+24 : 1,2,3,4,6,8,12,24
+32 : 1,2,4,8,16,32
+44: 1,2,4,11,22,44
+GCD: 
+'''
+def find_divisor(num):
+    divisors = []
+    for x in range(1, num + 1):
+        if num % x == 0:
+            divisors.append(x)
+    
+    return divisors
+
+def find_gcd(num1, num2):
+    divisor_for_num1 = find_divisor(num1)
+    divisor_for_num2 = find_divisor(num2)
+
+    # Reverse to get larger number first
+    divisor_for_num1.reverse()
+
+    for div in divisor_for_num1:
+        if div in divisor_for_num2:
+            return div
+
+def find_lcm(num1, num2):
+    gcd  = find_gcd(num1, num2)
+    lcm = (num1  * num2 ) // gcd
+    return lcm
+
+n1 = int(input('number1: '))
+n2 = int(input('number2: '))
+gcd = find_gcd(n1, n2)
+lcm = find_lcm(n1, n2)
+print(f"GCD for {n1} & {n2} is {gcd}")
+print(f"LCM for {n1} & {n2} is {lcm}")
