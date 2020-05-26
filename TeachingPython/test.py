@@ -21,11 +21,17 @@ print()
 oddNumbers = [i*i for i in range(1, 100, 2)]
 print(oddNumbers)
 
-long_str = """
-Hello 
-this
-is 
-a
-long string
-"""
+sentence = "This is a interview questions"
+# char_list = [*sentence]
+# print(char_list)
 
+# char_freq = {ch: sentence.count(ch) for ch in char_list}
+# print(char_freq)
+
+# highest_frequently_used = sorted(
+#     char_freq, key=lambda item: char_freq[item], reverse=True)[0]
+# print(highest_frequently_used)
+
+char_freq = {ch: sentence.count(ch) for ch in sentence}
+most_used = sorted(char_freq.items(), key=lambda kv: kv[1], reverse=True)[0]
+print(*most_used)
