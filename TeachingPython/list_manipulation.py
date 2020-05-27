@@ -21,3 +21,14 @@ print(msg1, msg2)
 
 message = "I have changed"
 print(msg1, msg2)
+
+import copy as cp
+list1 = [4,5,[10,12],8]
+list2 = list1[:]            # Shallow Copy
+list3 = cp.deepcopy(list1)  # Deep Copy
+
+list2[2][0] = 15
+
+print(list1)
+print(list2)
+print(list3)
