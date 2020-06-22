@@ -1,0 +1,34 @@
+Hands On:
+1.Find the greatest and the smallest numbers:
+(i) 71834, 75284, 571, 2333, 594
+(ii) 9853, 7691, 9999, 12002
+
+2. Interchange the values between given indexes:
+71834, 75284, 571, 2333, 594
+Indexes(Zero-base index): 2,4 and 1,4
+71834, 75284, 594, 2333, 571 
+594, 75284, 571, 2333, 71834
+
+3. Arrange the following numbers in ascending order:
+304, 340, 34, 43, 430
+34, 43, 304, 340,430
+
+4. Arrange the following numbers in descending order:
+53, 7333, 553, 7529, 335
+7529, 7333, 553, 335, 53
+
+5. Write all possible 2-digits numbers that can be formed by using the digits 2, 3 and 4. 
+Repetition of digits is not allowed. Also find their sum.
+
+6. Write all possible 2-digit numbers using the digits 4, 0 and 9. 
+Repetition of digits is not allowed. Also find their sum.
+
+7. Write all possible 3-digits numbers using the digits 3, 1 and 5. 
+Repetition of digits is not allowed. Also find their sum.
+
+8. Write all possible 3-digits numbers using the digits 7, 0 and 6. 
+Repetition of digits is not allowed. Also, find their sum.
+
+9. Find the unique values from the below numbers:
+(i) 304, 34, 340, 34, 43, 430, 340 -> 304,34, 340, 43, 430
+(ii) 7529, 7333, 553, 335, 53 -> 7529, 7333, 553, 335, 53
